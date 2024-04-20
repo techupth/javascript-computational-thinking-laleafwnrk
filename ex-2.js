@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+let result= 0;
+let aa = [...orders].filter(s => s.creditCardType=="jcb")||[] 
+for (const key of aa) {
+  console.log(key.productPrice,key.productQuantity);
+  let total=key.productPrice*key.productQuantity;
+  console.log(total);
+  result = result + total;
+
+}
+
+console.log(`Paid by JCB credit card amount: ${result} bath`);

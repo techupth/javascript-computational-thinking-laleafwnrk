@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+let max ;
+for (const item of orders){
+  if(!max) max = item
+  if(max?.productPrice<item.productPrice){
+    max = item;
+  }
+}
+let result = max.productPrice*max.productQuantity
+console.log(`The most expensive order is order id ${max.id} (${result} bath)`)
