@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let result= 0;
+for (const key of orders) {
+  console.log(key.productPrice,key.productQuantity);
+  let total=key.productPrice*key.productQuantity;
+  console.log(total);
+  result = result + total;
+
+}
+
+console.log(`Total amount of the orders: ${result} bath`)

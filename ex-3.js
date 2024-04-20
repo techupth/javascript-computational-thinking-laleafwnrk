@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+let result= 0;
+let aa = [...orders].filter(s => s.customerName=="Birdie Shepland")||[] 
+for (const key of aa) {
+  console.log(key.productPrice,key.productQuantity);
+  let total=key.productPrice*key.productQuantity;
+  console.log(total);
+  result = result + total;
+}
+
+console.log(`Total paid amount of Birdie Shepland: ${result}`)
